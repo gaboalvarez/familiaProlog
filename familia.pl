@@ -46,6 +46,14 @@ padre(Tio,Primo),
 esTio(Tio,Persona).
 
 descendiente(Pariente,Persona):-
+padre(Pariente,Persona).
+descendiente(Pariente,Persona):-
+esAbuelo(Pariente,Persona).
+descendiente(Pariente,Persona):-
+padre(Intermedio,Persona),
+descendiente(Pariente,Intermedio).
+
+
 
 
 
